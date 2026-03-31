@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bitgii nee</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .box {
+      padding: 24px;
+      max-width: 500px;
+    }
+
+    h1 {
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+
+    img {
+      max-width: 100%;
+      width: 320px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    p {
+      margin-top: 16px;
+      color: #ddd;
+      font-size: 18px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .loading {
+      font-size: 24px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div id="loadingScreen">
+      <h1>Түр хүлээнэ үү...</h1>
+      <p class="loading">Битгий нээ гээд байхад</p>
+    </div>
+
+    <div id="imageScreen" class="hidden">
+      <h1>😄</h1>
+      <img src="fuck.gif">
+      <p>Fuck you.</p>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('loadingScreen').classList.add('hidden');
+      document.getElementById('imageScreen').classList.remove('hidden');
+    }, 3000);
+  </script>
+</body>
+</html>
